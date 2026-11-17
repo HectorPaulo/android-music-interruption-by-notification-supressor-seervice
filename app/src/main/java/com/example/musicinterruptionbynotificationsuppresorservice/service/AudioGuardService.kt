@@ -14,7 +14,7 @@ import com.example.musicinterruptionbynotificationsuppresorservice.R
 class AudioGuardService : Service() {
 
     companion object {
-        private const val CHANNEL_ID = "AudioGuardChannel"
+        private const val CHANNEL_ID = "SuppressorChannel"
         private const val NOTIFICATION_ID = 101
         const val ACTION_STOP_SERVICE = "ACTION_STOP_SERVICE"
     }
@@ -61,7 +61,7 @@ class AudioGuardService : Service() {
     private fun createNotificationChannel() {
         val channel = NotificationChannel(
             CHANNEL_ID,
-            "Servicio Audio Guard",
+            "Servicio Supresor de Audio",
             NotificationManager.IMPORTANCE_LOW
         ).apply {
             description = "Mantiene el supresor de interrupciones corriendo en segundo plano"

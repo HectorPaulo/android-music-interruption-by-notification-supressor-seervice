@@ -21,7 +21,7 @@ class NotificationMonitorService : NotificationListenerService() {
             val packageName = notification.packageName
             val title = notification.notification.extras.getString("android.title") ?: "Sin título"
 
-            Log.d("AudioGuard", "Notificación detectada de: $packageName | Título: $title")
+            Log.d("MusicSuppressor", "Notificación detectada de: $packageName | Título: $title")
 
             // Aquí disparamos la recuperación inmediatamente tras detectar una notificación
             // Se puede agregar lógica adicional en el futuro para filtrar por paquete si se desea

@@ -45,13 +45,13 @@ class MainActivity : ComponentActivity() {
 
     private fun checkListenerAndStartService() {
         if (!isNotificationListenerGranted(this)) {
-            Toast.makeText(this, "Por favor, habilita el acceso a notificaciones para AudioGuard", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Por favor, habilita el acceso a notificaciones", Toast.LENGTH_LONG).show()
             startActivity(Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
             finish()
         } else {
             val intent = Intent(this, AudioGuardService::class.java)
             ContextCompat.startForegroundService(this, intent)
-            Toast.makeText(this, "AudioGuard activado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Supresor activado", Toast.LENGTH_SHORT).show()
             finish() // Cierra la interfaz inmediatamente
         }
     }
